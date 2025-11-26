@@ -612,5 +612,13 @@ const enough = (cap,on,wait) => (on + wait) > cap ? Math.abs(wait - (cap - on)) 
 // 10 is the number that fits between 5 and 14 and the index of 10 in the input array is 1.
 
 function gimme (triplet) {
-  
+  const min = Math.min(...triplet)
+  const max = Math.max(...triplet)
+
+  const middleNum = triplet.filter(x => x !== min && x !== max)
+
+  return triplet.indexOf(...middleNum)
+
 }
+
+console.log(gimme([5,10,14]));
