@@ -16,6 +16,25 @@ Input may be any positive or negative integer (including 0).
 
 You can assume that all inputs are valid integers.*/
 
+
+//My solution
 function roundToNext5(n){
-  // ...
+
+  if((n % 5 === 0) || n === 0){
+    return n
+  }else {
+    for(let i = 0; i <= 5; i++ ){
+        //add one to n
+        n += 1;
+        
+        if(n % 5 === 0){
+            return n;  
+        }  
+    }
+  }
+}
+
+//Optimal Solution
+function optimalRoundToNext5(n){
+    return Math.ceil(n/5) * 5;
 }
