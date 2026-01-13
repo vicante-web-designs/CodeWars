@@ -32,5 +32,3 @@ function nbDig(n, d) {
     
     return splitNumString.filter(num => num === `${d}`).length
 }
-
-console.log(nbDig(25, 1));
