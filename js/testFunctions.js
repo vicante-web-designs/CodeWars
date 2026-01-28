@@ -1,14 +1,13 @@
-async function getApi(){
-    try{
-        const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+let queue = []
 
-        const data = await res.json();
+queue.push(5);
 
-        console.log(data[5].title)
-        } 
-    catch(err){
-        console.log(err.message)
-    }
-}
+queue.push(2)
 
-getApi();
+
+
+console.log(queue);
+
+let i = queue.shift()
+
+alert(queue);
