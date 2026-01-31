@@ -1,13 +1,11 @@
-let queue = []
+/*
+Complete the function/method so that it returns the url with anything after the anchor (#) removed.
 
-queue.push(5);
+Examples
+"www.codewars.com#about" --> "www.codewars.com"
+"www.codewars.com?page=1" -->"www.codewars.com?page=1"
+*/
 
-queue.push(2)
-
-
-
-console.log(queue);
-
-let i = queue.shift()
-
-alert(queue);
+function removeUrlAnchor(url){
+  // TODO: complete
+}
