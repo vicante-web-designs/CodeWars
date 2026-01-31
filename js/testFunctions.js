@@ -7,5 +7,10 @@ Examples
 */
 
 function removeUrlAnchor(url){
-  // TODO: complete
+
+    return url.includes('#') ? url.slice(0, url.indexOf('#')) : url
+
 }
+
+//Optimized solution
+const removeUrlAnchor2 = url => url.includes('#') ? url.slice(0, url.indexOf('#')) : url
