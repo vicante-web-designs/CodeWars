@@ -46,3 +46,5 @@ function incrementString (strng) {
 }
 
 console.log(incrementString('foobar00999'));
+
+//TODO: Complete tis kata
