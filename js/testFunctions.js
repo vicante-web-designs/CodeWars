@@ -25,26 +25,23 @@ Attention: If the number has leading zeros the amount of digits should be consid
 function incrementString (strng) {
   //loop through the string
   const splitStrng = strng.split('')
+
+  console.log(splitStrng[splitStrng.length - 3])
  
-  if(/\d/.test(splitStrng)){
-    const numStartingIndex = splitStrng.findIndex(char => {
-        return !isNaN(char) && char.trim() !== '';
-    })// For finding the index of the first number in the array
+  if(/\d/.test(splitStrng[splitStrng.length - 1])){
+    //loop through the array in reverse 
+    //if it's a number, store in a new array
+    // if not, then break the loop
+    //reverse the array
+    //then join it, turn it into a number, add 1, then padd it with zeros
+    //slice the string from the first char to the last set of numbers
+    //join it with the numbers and return
 
-    const slicedNumStrng = strng.slice(numStartingIndex)//Slice the string starting from the numbers to the end
-
-    const incremented = String(Number(slicedNumStrng) + 1); //Increment the sliced number string, then turn it into a string again
-
-    const paddedNumString = incremented.padStart(slicedNumStrng.length, '0')//Add the leading zeros that were removed during the increment calculation process
-
-    const slicedLetterStrng = strng.slice(0, numStartingIndex)//Slice the string starting from the beginning to the wjust before the numbers
-
-    return (`${slicedLetterStrng}${paddedNumString}`)//Join them together and return
   }else{
     return strng += 1; //Just add the string '1' to the end of the string
   }
 }
 
-console.log(incrementString('foobar00999'));
+console.log(incrementString('foo99obar99'));
 
-//TODO: Complete tis kata
+//TODO: Complete this kata
